@@ -18,10 +18,9 @@ const adminprefix = "-"
 
 
 
-client.channels.find('id', '496381656144543746').setName(`『 التاريخ ↩ ${Year}/${Month}/${day} 』`)
-}, 5000); 
+client.channels.find('id', '496381656144543746').setName(`『 التاريخ ↩ ${Year}/${Month}/${day} 』`) 
 
-});
+
 
 
 client.on("guildMemberAdd", (member) => {
