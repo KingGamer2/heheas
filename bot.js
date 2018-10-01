@@ -32,37 +32,74 @@ client.channels.get('496381599437291534').edit({name : `『 الأعضاء ↩ $
 
 
 
-client.on('message', async message => {
-  if(message.content.startsWith(prefix + "اعلان")) {
-    await message.channel.send("** حسنا اكتب الاعلان الان مع السعر**").then(e => {
-    let filter = m => m.author.id === message.author.id
-    let lan = '';
-    let md = '';
-    let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 400000, errors: ['time'] })
-    .then(collected => {
-      lan = collected.first().content
-      collected.first().delete()
-e.delete();
- message.channel.send('جاري الاعلان ..').then(b => {
-        setTimeout(() => {
-  b.edit(`**تم الاعلان**`)
-        },2000);
-var gg = message.guild.channels.find('name', '🔖البيع-بي-الكريديت🔖')
-if(!gg) return;
-if(gg) {
-gg.send({embed : new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.setTitle(`** @everyone | @here **:`)
-.setDescription(`  **🥇 اعلان جديد 🥇**  : \n ${lan}   \n   تم الاعلان بواسطة  : <@${message.author.id}> `)  
-.setFooter(`THE GAMER PRO`)
-.setTimestamp()
+client.on('message',async message => {
+    if(message.content.startsWith(prefix + "اعلان")) {
+  if(!message.channel.guild) return message.reply(' ');
+    let rank = message.guild.member(message.author).roles.find('name', '⇒ Seller');
+    if (!rank) return message.channel.send(':octagonal_sign: **| يجب ان تمتلك رتبة Seller  لأستخدام هذا الأمر.**');
+    let jscodes = message.guild.channels.find(`name`, "🔖البيع-بي-الكريديت🔖");
+    if(!jscodes) return message.channel.send(":x:لم اجد الروم ");
+      let filter = m => m.author.id === message.author.id;
+      let thisMessage;
+      let thisFalse;
+      message.channel.send(':pencil: **| من فضلك اكتب  الاعلان... :pencil2: **').then(msg => {
+  
+      message.channel.awaitMessages(filter, {
+        max: 1,
+        time: 90000,
+        errors: ['time']
+      })
+      .then(collected => {
+        collected.first().delete();
+        thisMessage = collected.first().content;
+        let boi;
+        msg.edit(':heart: **| من فضلك اكتب السعر... :pencil2: **').then(msg => {
+  
+            message.channel.awaitMessages(filter, {
+              max: 1,
+              time: 90000,
+              errors: ['time']
+            })
+                .then(collected => {
+                  collected.first().delete();
+                boi = collected.first().content;
+        msg.edit(':heart: **| [ هل انت متأكد من نشر الاعلان؟ | [ نعم ] او [ لا**');
+   message.channel.awaitMessages(response => response.content === 'نعم' || 'لا' && filter,{
+          max: 1,
+          time: 90000,
+          errors: ['time']
+        })
+        .then(collected => {
+          if(collected.first().content === 'لا') {
+            msg.delete();
+            message.delete();
+            thisFalse = false;
+          }
+          if(collected.first().content === 'نعم') {
+            if(thisFalse === false) return;
+            msg.edit(':heart: **| Done :white_check_mark:, تم بنجاح نشر اعلانك**');
+            collected.first().delete();
+            jscodes.send(`@everyone | @here
+=======================================
+**اعلان جديد 🥇 :arrow_down:**            
+\`\`\`
+${thisMessage}\`\`\`
+======================================
+**السعر**: ${boi}
+**تم النشر من قبل**: ${message.author}`); 
+          }
+        }
+    );
 });
-}        
-})
-})
-})
- }
-})
+      });
+   
+      
+    });
+}
+);
+      }
+});
+
 
 
 
@@ -81,7 +118,11 @@ client.on('ready', () => {
   console.log('')
   console.log('╚[════════════════════════════════════]╝')
 });
-
+client.on('message', message => {
+ if(message.content.startsWith(prefix + "come")) {
+message.member.voiceChannel.join();
+}
+});
 /////////////////////////
 ////////////////////////
 //////////////////////
