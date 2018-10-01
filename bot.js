@@ -16,6 +16,43 @@ const adminprefix = "-"
 ////////////////////////
 //////////////////////
 
+
+client.on('message', async message => {
+  if(message.content.startsWith(prefix + "report")) {
+    await message.channel.send("** حسنا اكتب الاعلان الان مع السعر**").then(e => {
+    let filter = m => m.author.id === message.author.id
+    let lan = '';
+    let md = '';
+    let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 400000, errors: ['time'] })
+    .then(collected => {
+      lan = collected.first().content
+      collected.first().delete()
+e.delete();
+ message.channel.send('جاري الاعلان ..').then(b => {
+        setTimeout(() => {
+  b.edit(`**تم الاعلان**`)
+        },2000);
+var gg = message.guild.channels.find('name', '🔖البيع-بي-الكريديت🔖')
+if(!gg) return;
+if(gg) {
+gg.send({embed : new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle(`**🥇 اعلان جديد 🥇**:`)
+.setDescription(`  **الاعلان**  : \n ${lan}   \n   تم الاعلان بواسطة  : <@${message.author.id}> `)  
+.setFooter(`@everyone | @here`)
+.setTimestamp()
+});
+}        
+})
+})
+})
+})
+})
+ }
+})
+
+
+
 client.on('ready', () => {
   console.log('╔[══════════════════════════════════]╗');
   console.log('')
