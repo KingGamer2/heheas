@@ -37,9 +37,9 @@ if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.setTitle(`**🥇 اعلان جديد 🥇**:`)
-.setDescription(`  **الاعلان**  : \n ${lan}   \n   تم الاعلان بواسطة  : <@${message.author.id}> `)  
-.setFooter(`@everyone | @here`)
+.setTitle(`** @everyone | @here **:`)
+.setDescription(`  **🥇 اعلان جديد 🥇**  : \n ${lan}   \n   تم الاعلان بواسطة  : <@${message.author.id}> `)  
+.setFooter(`THE GAMER PRO`)
 .setTimestamp()
 });
 }        
