@@ -1568,7 +1568,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "{, R o y a l e }."
+          text: "{:crown:THE GAMER PRO :crown:}."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -2224,7 +2224,7 @@ const Za7f = [
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL)
- .addField(', R o y a l e  ♧' ,
+ .addField(':crown:THE GAMER PRO :crown:' ,
   `${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[38ab] Send By: ' + message.author.username)
@@ -2285,7 +2285,7 @@ const Love = [  "**احبك / عدد قطرات المـــطر والشجر و
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL)
- .addField(', R o y a l e ' ,
+ .addField(':crown:THE GAMER PRO :crown:' ,
   `${Love[Math.floor(Math.random() * Love.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
@@ -2324,7 +2324,7 @@ client.on('message', message => { //bot
                                     .setAuthor(client.user.username,client.user.avatarURL)
                                     .setThumbnail(client.user.avatarURL)
                                     .setColor('RANDOM')
-                                    .setTitle('``, R o y a l e `` ')
+                                    .setTitle('``:crown:THE GAMER PRO :crown:`` ')
                                     .addField('``البنق🚀``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
                                     .addField('``استخدام الذاكرة ``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
                                     .addField('``السيرفرات🌐``', [client.guilds.size], true)
@@ -2395,7 +2395,7 @@ client.on('message', message => {
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
 .setDescription("معلومات عن الحــساب")
-               .setFooter(`{, R o y a l e }.`, '')
+               .setFooter(`{:crown:THE GAMER PRO :crown:}.`, '')
   .setColor("#9B59B6")
   .addField("اســـم الحســاب", `${message.author.username}`)
   .addField('كود الحساب الخاص', message.author.discriminator)
@@ -2989,7 +2989,7 @@ client.on('message', message => {
 
 
 client.on('message', function(message) {
-	const myID = "474175378118803466";
+	const myID = "352832614190809089";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(adminprefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -3171,7 +3171,7 @@ if (err) console.error(err);
 
   client.on('message',async message => {
     if(message.content.startsWith(adminprefix + "restart")) {
-        if(message.author.id !== "474175378118803466") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "352832614190809089") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
@@ -3193,93 +3193,6 @@ client.login(process.env.BOT_TOKEN);
 
 
 
-
-
-
-
-client.on('message', msg => {
-  if (msg.content === 'كسمك') {
-   msg.delete(30)
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'زب') {
-   msg.delete(30)
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'زبي') {
-   msg.delete(30)
- 
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'كس') {
-   msg.delete(30)
- 
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'fuck') {
-   msg.delete(30)
- 
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'اير') {
-   msg.delete(30)
- 
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'anal') {
-   msg.delete(30)
- 
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'pussy') {
-   msg.delete(30)
- 
-  }
-});
-client.on('message', msg => {
-  if (msg.content === 'cock') {
-   msg.delete(30)
- 
-  }
-});
-client.on('message', msg => {
-  if (msg.content === 'نيك') {
-   msg.delete(30)
- 
-  }
-});
-client.on('message', msg => {
-  if (msg.content === 'قحبة') {
-   msg.delete(30)
- 
-  }
-});
-client.on('message', msg => {
-  if (msg.content === 'عير في اختك') {
-   msg.delete(30)
- 
-  }
-});
-client.on('message', msg => {
-  if (msg.content === 'عير') {
-   msg.delete(30)
- 
-  }
-});
 
 
 client.on('message', message => {//Alpha Codes
