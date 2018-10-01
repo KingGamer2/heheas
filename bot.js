@@ -18,7 +18,7 @@ const adminprefix = "-"
 
 
 client.on('message', async message => {
-  if(message.content.startsWith(prefix + "report")) {
+  if(message.content.startsWith(prefix + "اعلان")) {
     await message.channel.send("** حسنا اكتب الاعلان الان مع السعر**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
@@ -43,8 +43,6 @@ gg.send({embed : new Discord.RichEmbed()
 .setTimestamp()
 });
 }        
-})
-})
 })
 })
 })
