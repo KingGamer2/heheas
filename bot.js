@@ -302,6 +302,20 @@ function play(guild, song) {
 ////////////////////////
 //////////////////////
 
+
+
+
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`👑ولكم نورت السيرفر | Welcome To Server👑 
+اسم العضو المحترم |name member🌷  ${member}
+انت العضو الأسطورة رقم |you member number is👑 ${member.guild.memberCount}`) 
+}).catch(console.error)
+})
+
+
+
+
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`
