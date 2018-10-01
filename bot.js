@@ -17,6 +17,22 @@ const adminprefix = "-"
 //////////////////////
 
 
+
+client.channels.find('id', '496381656144543746').setName(`『 التاريخ ↩ ${Year}/${Month}/${day} 』`)
+}, 5000); 
+
+});
+
+
+client.on("guildMemberAdd", (member) => {
+client.channels.get('496381599437291534').edit({name : `『 الأعضاء ↩ ${member.guild.memberCount} 』`});
+})
+client.on("guildMemberRemove", (member) => {
+client.channels.get('496381599437291534').edit({name : `『 الأعضاء ↩ ${member.guild.memberCount} 』`});
+})
+
+
+
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "اعلان")) {
     await message.channel.send("** حسنا اكتب الاعلان الان مع السعر**").then(e => {
