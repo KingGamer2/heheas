@@ -18,7 +18,7 @@ const adminprefix = "-"
 
 
 
-client.channels.find('id', '496381656144543746').setName(`『 التاريخ ↩ ${Year}/${Month}/${day} 』`) 
+
 
 
 
